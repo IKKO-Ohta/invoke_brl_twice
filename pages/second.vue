@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">double_invoke_beforeRouteEnter</h1>
+      <h1 class="title">invoke_brl_twice</h1>
       <h2 class="subtitle">second page</h2>
       <div class="links">
         <button @click="backToBack" class="button--green">back-to-back</button>

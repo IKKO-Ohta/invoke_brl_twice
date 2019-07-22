@@ -1,10 +1,10 @@
-# doubule_invoke_beforeRouteEnter
+# invoke_brl_twice
 
 > My groovy Nuxt.js project
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
