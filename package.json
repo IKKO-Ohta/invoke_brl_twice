@@ -1,5 +1,5 @@
 {
-  "name": "doubule_invoke_beforeRouteLeave",
+  "name": "doubule_invoke_before_route_leave",
   "version": "1.0.0",
   "description": "My groovy Nuxt.js project",
   "author": "IKKO-Ohta",
@@ -12,14 +12,17 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "@nuxt/typescript": "^2.8.1",
+    "nuxt": "2.6",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
-    "vue-jest": "^3.0.3",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "vue-jest": "^3.0.3"
   }
 }
