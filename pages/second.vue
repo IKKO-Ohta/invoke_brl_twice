@@ -5,8 +5,7 @@
       <h1 class="title">doubule_invoke_beforeRouteEnter</h1>
       <h2 class="subtitle">My groovy Nuxt.js project</h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+        <button @click="backToBack" class="button--green">back-to-back</button>
       </div>
     </div>
   </div>
@@ -20,7 +19,16 @@ import { Component } from "nuxt-property-decorator";
 @Component({
   components: { Logo }
 })
-export default class SecondPage extends Vue {}
+export default class SecondPage extends Vue {
+  backToBack() {
+    this.$router.push({ path: "/one" });
+  }
+
+  beforeRouteLeave(_, __, next) {
+    console.log("hoge");
+    next();
+  }
+}
 </script>
 
 <style>
