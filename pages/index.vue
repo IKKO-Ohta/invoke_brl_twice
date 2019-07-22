@@ -2,24 +2,24 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">doubule_invoke_beforeRouteLeave</h1>
+      <h1 class="title">doubule_invoke_beforeRouteEnter</h1>
       <h2 class="subtitle">My groovy Nuxt.js project</h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+        <nuxt-link to="/one" class="button--green">goto one</nuxt-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Vue from "vue";
 import Logo from "~/components/Logo.vue";
+import { Component } from "nuxt-property-decorator";
 
-export default {
-  components: {
-    Logo
-  }
-};
+@Component({
+  components: { Logo }
+})
+export default class TopPage extends Vue {}
 </script>
 
 <style>
