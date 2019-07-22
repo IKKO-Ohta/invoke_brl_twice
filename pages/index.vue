@@ -19,11 +19,7 @@ import { Component } from "nuxt-property-decorator";
 @Component({
   components: { Logo }
 })
-export default class TopPage extends Vue {
-  mounted() {
-    console.log("router", this.$router);
-  }
-}
+export default class TopPage extends Vue {}
 </script>
 
 <style>

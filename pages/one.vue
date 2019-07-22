@@ -2,11 +2,11 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">doubule_invoke_beforeRouteEnter</h1>
-      <h2 class="subtitle">My groovy Nuxt.js project</h2>
+      <h1 class="title">double_invoke_beforeRouteEnter</h1>
+      <h2 class="subtitle">top page</h2>
       <div class="links">
         <nuxt-link to="/one" class="button--green">goto top</nuxt-link>
-        <nuxt-link to="/one" class="button--green">goto second</nuxt-link>
+        <nuxt-link to="/second" class="button--green">goto second</nuxt-link>
       </div>
     </div>
   </div>
@@ -20,7 +20,15 @@ import { Component } from "nuxt-property-decorator";
 @Component({
   components: { Logo }
 })
-export default class OnePage extends Vue {}
+export default class OnePage extends Vue {
+  beforeRouteEnter(to, from, next) {
+    if (from.name === "second") {
+      next("/");
+    } else {
+      next();
+    }
+  }
+}
 </script>
 
 <style>

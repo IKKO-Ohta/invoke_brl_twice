@@ -2,8 +2,8 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">doubule_invoke_beforeRouteEnter</h1>
-      <h2 class="subtitle">My groovy Nuxt.js project</h2>
+      <h1 class="title">double_invoke_beforeRouteEnter</h1>
+      <h2 class="subtitle">second page</h2>
       <div class="links">
         <button @click="backToBack" class="button--green">back-to-back</button>
       </div>
@@ -24,8 +24,8 @@ export default class SecondPage extends Vue {
     this.$router.push({ path: "/one" });
   }
 
-  beforeRouteLeave(_, __, next) {
-    console.log("hoge");
+  beforeRouteLeave(to, from, next) {
+    console.log("hoge????");
     next();
   }
 }
