@@ -1,5 +1,5 @@
 {
-  "name": "doubule_invoke_beforeRouteEnter",
+  "name": "doubule_invoke_beforeRouteLeave",
   "version": "1.0.0",
   "description": "My groovy Nuxt.js project",
   "author": "IKKO-Ohta",
