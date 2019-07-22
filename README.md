@@ -2,6 +2,8 @@
 
 > My groovy Nuxt.js project
 
+ikko.ohta 2019
+
 ## Build Setup
 
 ```bash
