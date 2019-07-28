@@ -40,13 +40,13 @@
 
 ![rec.png](./rec.png)
 
-実際のページ２の`beforeRouteLeave`は次のように挙動する:
+実際のページ２の`beforeRouteLeave`はこのように挙動する。
 
 `beforeRouteLeave`が 2=>1 と 2 => top の2回分呼ばれる。引数の`from.name`と`to.name`の中身を調べると確かにそうなっている。1=>top へのリダイレクトがこの2回目の遷移を誘発させる。**このとき1=>topの遷移でもない！ あくまで from="2", to="top"の`beforeRouteLeave`が走る！**
 
 # 解決策
 
-`ページ2`の`beforeRouteLeave`の`from`か`to`を検査し、一回目の遷移についてガードしないようにすれば良い。
+`ページ2`の`beforeRouteLeave`の`to`を検査し、一回目の遷移についてガードしないようにすれば良い。
 
 ## before
 
