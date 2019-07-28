@@ -21,12 +21,16 @@ import { Component } from "nuxt-property-decorator";
 })
 export default class SecondPage extends Vue {
   backToBack() {
-    this.$router.push({ path: "/one" });
+    this.$router.push({ path: "/first" });
   }
 
   beforeRouteLeave(to, from, next) {
-    console.log("hoge????");
-    next();
+    if (to.name === "first") {
+      next();
+      return;
+    }
+
+    window.confirm("このページを離れますか？") ? next() : next(false);
   }
 }
 </script>

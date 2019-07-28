@@ -5,7 +5,7 @@
       <h1 class="title">invoke_brl_twice</h1>
       <h2 class="subtitle">My groovy Nuxt.js project</h2>
       <div class="links">
-        <nuxt-link to="/one" class="button--green">goto one</nuxt-link>
+        <nuxt-link to="/first" class="button--green">goto first</nuxt-link>
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@ export default class TopPage extends Vue {}
 </script>
 
 <style>
-.container {
+hoe .container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
