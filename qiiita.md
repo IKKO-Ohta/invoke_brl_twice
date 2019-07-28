@@ -7,6 +7,8 @@
 同じ問題を扱ったissue
 => <https://github.com/vuejs/vue-router/issues/2102>
 
+-   本件は仕様として扱われるようなので、今後しばらく対応される見込みはなさそう。
+
 # 再現環境
 
 -   Chrome バージョン: 75.0.3770.142
@@ -28,9 +30,18 @@
 
 # どうして起こるか？
 
-![1.png](./1.png)
-2 =>  1, 1 => top のような遷移をしそうな気がするが、ページ２の`beforeRouteLeave`は次のように挙動する:
-![2.png](./2.png)
+## 予想
+
+![ex.png](./ex.png)
+
+2 =>  1, 1 => top のような遷移をしそうな気がする。
+
+## 実際
+
+![rec.png](./rec.png)
+
+実際のページ２の`beforeRouteLeave`は次のように挙動する:
+
 `beforeRouteLeave`が 2=>1 と 2 => top の2回分呼ばれる。引数の`from.name`と`to.name`の中身を調べると確かにそうなっている。1=>top へのリダイレクトがこの2回目の遷移を誘発させる。**このとき1=>topの遷移でもない！ あくまで from="2", to="top"の`beforeRouteLeave`が走る！**
 
 # 解決策

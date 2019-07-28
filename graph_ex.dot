@@ -1,0 +1,7 @@
+digraph {
+    rankdir=LR;
+    node [shape = circle];
+    page_2 -> page_1 [ color="blue" ];
+    page_1 -> page_top [ color="blue" ];
+    page_2 -> page_top [  ];
+}
